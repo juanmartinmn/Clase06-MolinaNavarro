@@ -85,17 +85,7 @@ async function testing() {
       stock: 6,
       id: null
     });
-  
-    await productManagerInstance.addProduct({
-      title: "Abbey Road",
-      description: "The Beatles",
-      price: 9999,
-      thumbnail: "ruta/artb.jpg",
-      code: "A010",
-      stock: 2,
-      id: null
-    });
-  
+
     console.log("getProducts después de agregar los productos:", await productManagerInstance.getProducts());
   
     const nonExistentProduct = await productManagerInstance.getProductById(15);
@@ -105,12 +95,12 @@ async function testing() {
     console.log("Listado de productos iniciales:", initialProducts);
   
     const newProduct = {
-      title: "Producto prueba 12",
-      description: "Descripción del producto prueba 12",
-      price: 10899.75,
-      thumbnail: "Sin imagen",
-      code: "Product12",
-      stock: 10,
+      title: "Abbey Road",
+      description: "The Beatles",
+      price: 9999,
+      thumbnail: "ruta/artb.jpg",
+      code: "A010",
+      stock: 2,
     };
     await productManagerInstance.addProduct(newProduct);
   
